@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script 2.0.js" defer></script>
+    <title>Paint Online</title>
+</head>
+<body>
+    <div class="tools">
+        <button class="color-btn red" data-color="#ff0000"></button>
+        <button class="color-btn orange" data-color="#ff7700"></button>
+        <button class="color-btn yellow" data-color="#d0ff00"></button>
+        <button class="color-btn green" data-color="#00ff00"></button>
+        <button class="color-btn blue-white" data-color="#00fbff"></button>
+        <button class="color-btn blue" data-color="#0000ff"></button>
+        <button class="color-btn violet" data-color="#5b0085"></button>
+        <button class="color-btn black active" data-color="#000000"></button>
+        <button class="color-btn white" data-color="white"></button>
+        <button class="color-btn eraser" title="Edit">🧹</button>
+        <button id="undobutton">◀ Undo</button>
+        <button id="clearAll">❌ Clear</button>
+
+        <div class="brush-size">
+            <label for="brushSize">Размер кисти:</label>
+            <input type="range" id="brushSize" min="1" max="100" value="5">
+            <span id="brushSizeValue">5</span>
+        </div>
+
+        <div class="opacity-control">
+            <label for="transparency">Непрозрачность:</label>
+                <input
+                    type="range"
+                    id="opacity"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="1"
+                />
+            <span id="opacityDisplay">100</span>
+        </div>
+
+        <button class="color-btn Edit" title="Edit">1=⚫</button>
+        <button class="color-btn Edit" title="Edit">2=◼</button>
+
+    </div>
+    <canvas id="drawingCanvas" width="1500" height="800"></canvas>
+</body>
+</html>
